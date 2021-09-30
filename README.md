@@ -34,12 +34,6 @@ Version|Date|Comments
 -------|----|--------
 1.0|September 30, 2021|Initial release
 
-## Disclaimer
-
--
-
----
-
 ## Minimal Path to Run the Solution
 
 - Clone this repository
@@ -48,13 +42,9 @@ Version|Date|Comments
   - **npm install**
   - **gulp serve**
 
-
 ## Features
 
 The Form WebPart has a configurable Property which allows the user to define a SP-List as Target for the License-Order.
 
 ![alt text](https://github.com/BFH-MS/SPFx---License-Form/blob/main/images/WebPart%20Props.png)
 
-## References
-
--
