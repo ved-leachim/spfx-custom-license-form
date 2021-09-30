@@ -1,0 +1,74 @@
+{
+  "id": "be9d1cb7-1324-4927-8f7f-a670062a99fa",
+  "alias": "LicenseFormWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart"
+  ],
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "License Form"
+      },
+      "description": {
+        "default": "This Form is used to get license keys of special software."
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "License Form"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/dist/"
+    ],
+    "entryModuleId": "license-form-web-part",
+    "scriptResources": {
+      "license-form-web-part": {
+        "type": "path",
+        "path": "license-form-web-part_a930b9be494d578ba9f4.js"
+      },
+      "@microsoft/sp-property-pane": {
+        "type": "component",
+        "id": "f9e737b7-f0df-4597-ba8c-3060f82380db",
+        "version": "1.12.1"
+      },
+      "LicenseFormWebPartStrings": {
+        "type": "localizedPath",
+        "paths": {
+          "de-CH": "LicenseFormWebPartStrings_de-ch_04b53a2d9c2624abd723eac7e4fb6632.js",
+          "en-US": "LicenseFormWebPartStrings_en-us_1ab449209125e3e1a0be7c372ff7f3cc.js"
+        },
+        "defaultPath": "LicenseFormWebPartStrings_en-us_1ab449209125e3e1a0be7c372ff7f3cc.js"
+      },
+      "@microsoft/sp-lodash-subset": {
+        "type": "component",
+        "id": "73e1dc6c-8441-42cc-ad47-4bd3659f8a3a",
+        "version": "1.12.1"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.12.1"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
+        "version": "1.12.1"
+      },
+      "@microsoft/sp-http": {
+        "type": "component",
+        "id": "c07208f0-ea3b-4c1a-9965-ac1b825211a6",
+        "version": "1.12.1"
+      }
+    }
+  }
+}
