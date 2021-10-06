@@ -1291,7 +1291,7 @@ var MANIFESTS_ARRAY = [
       "scriptResources": {
         "license-form-web-part": {
           "type": "path",
-          "path": "license-form-web-part_a930b9be494d578ba9f4.js"
+          "path": "license-form-web-part_2d7947413e48c5c2ac81.js"
         },
         "@microsoft/sp-property-pane": {
           "type": "component",
@@ -1301,10 +1301,10 @@ var MANIFESTS_ARRAY = [
         "LicenseFormWebPartStrings": {
           "type": "localizedPath",
           "paths": {
-            "de-CH": "LicenseFormWebPartStrings_de-ch_04b53a2d9c2624abd723eac7e4fb6632.js",
-            "en-US": "LicenseFormWebPartStrings_en-us_1ab449209125e3e1a0be7c372ff7f3cc.js"
+            "de-CH": "LicenseFormWebPartStrings_de-ch_a177eb8d350562a30a08ba0d74c287fd.js",
+            "en-US": "LicenseFormWebPartStrings_en-us_c0fd6790138d6603429653be2c6eaa1a.js"
           },
-          "defaultPath": "LicenseFormWebPartStrings_en-us_1ab449209125e3e1a0be7c372ff7f3cc.js"
+          "defaultPath": "LicenseFormWebPartStrings_en-us_c0fd6790138d6603429653be2c6eaa1a.js"
         },
         "@microsoft/sp-lodash-subset": {
           "type": "component",

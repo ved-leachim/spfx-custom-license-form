@@ -3,6 +3,7 @@ import { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 export interface ILicenseFormWebPartProps {
     targetList: string;
+    redirectUrl: string;
 }
 export default class LicenseFormWebPart extends BaseClientSideWebPart<ILicenseFormWebPartProps> {
     render(): void;

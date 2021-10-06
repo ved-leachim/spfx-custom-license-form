@@ -12,6 +12,7 @@ import * as strings from 'LicenseFormWebPartStrings';
 
 export interface ILicenseFormWebPartProps {
   targetList: string;
+  redirectUrl: string;
 }
 
 export default class LicenseFormWebPart extends BaseClientSideWebPart<ILicenseFormWebPartProps> {
@@ -37,8 +38,6 @@ export default class LicenseFormWebPart extends BaseClientSideWebPart<ILicenseFo
 
   private _addListItem() {
 
-    console.log(this.properties.targetList);
-
     let displayName = document.getElementById("displayName")["value"];
     let eMail = document.getElementById("eMail")["value"];
     let statusMessage: Element = this.domElement.querySelector('#status');
@@ -58,10 +57,15 @@ export default class LicenseFormWebPart extends BaseClientSideWebPart<ILicenseFo
     this.context.spHttpClient.post(listAPI, SPHttpClient.configurations.v1, httpOptions)
         .then((response: SPHttpClientResponse) => {
           if (response.status === 201){
+            (document.getElementById("send") as HTMLButtonElement).disabled = true;
+            (document.getElementById("send") as HTMLButtonElement).style.backgroundColor = "gray";
+            (document.getElementById("send") as HTMLButtonElement).style.color = "white";
             statusMessage.innerHTML = strings.messageFormSendSuccessfully;
-            setTimeout(() => {
-              window.location.href = "https://intranet.bfh.ch/BFH/de/Dienste/IT/Software/SW_Kiosk/camtasia_snagit/form_closed/Seiten/default.aspx";
-            }, 3000);
+            if (strings.RedirectUrlFieldLabel !== "") {
+              setTimeout(() => {
+                window.location.href = this.properties.redirectUrl;
+              }, 3000);
+            }
           }
           else statusMessage.innerHTML = strings.messageFormSendError;
         });
@@ -84,6 +88,9 @@ export default class LicenseFormWebPart extends BaseClientSideWebPart<ILicenseFo
               groupFields: [
                 PropertyPaneTextField('targetList', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('redirectUrl', {
+                  label: strings.RedirectUrlFieldLabel
                 })
               ]
             }

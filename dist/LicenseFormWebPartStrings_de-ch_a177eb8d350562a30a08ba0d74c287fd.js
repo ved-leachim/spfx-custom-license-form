@@ -2,7 +2,8 @@ define([], function() {
     return {
         "PropertyPaneDescription": "Verbinde das WebPart mit dem Backend",
         "BasicGroupName": "Ziellisten im Backend",
-        "DescriptionFieldLabel": "Lizenz Listen Titel",
+        "DescriptionFieldLabel": "Lizenz Listen Titel:",
+        "RedirectUrlFieldLabel": "Url, für Weiterleitung nach erfolgreicher Bestellung:",
         "lblFormDisplayName": "Anzeigename",
         "lblFormEMail": "E-Mail",
         "buttonFormSend": "Absenden",

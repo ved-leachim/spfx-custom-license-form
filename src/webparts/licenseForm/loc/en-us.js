@@ -2,7 +2,8 @@ define([], function() {
   return {
     "PropertyPaneDescription": "Wire the Webpart to Backend Target List",
     "BasicGroupName": "Backend Target Lists",
-    "DescriptionFieldLabel": "License List Title",
+    "DescriptionFieldLabel": "License List Title:",
+    "RedirectUrlFieldLabel": "Enter an Url for redirecting after successful order:",
     "lblFormDisplayName": "Display Name",
     "lblFormEMail": "E-Mail",
     "buttonFormSend": "Send",

@@ -298,7 +298,7 @@ var LicenseFormWebPart = /** @class */ (function (_super) {
         this.domElement.querySelector("#send").addEventListener('click', function () { _this._addListItem(); });
     };
     LicenseFormWebPart.prototype._addListItem = function () {
-        console.log(this.properties.targetList);
+        var _this = this;
         var displayName = document.getElementById("displayName")["value"];
         var eMail = document.getElementById("eMail")["value"];
         var statusMessage = this.domElement.querySelector('#status');
@@ -315,10 +315,15 @@ var LicenseFormWebPart = /** @class */ (function (_super) {
         this.context.spHttpClient.post(listAPI, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_3__["SPHttpClient"].configurations.v1, httpOptions)
             .then(function (response) {
             if (response.status === 201) {
+                document.getElementById("send").disabled = true;
+                document.getElementById("send").style.backgroundColor = "gray";
+                document.getElementById("send").style.color = "white";
                 statusMessage.innerHTML = LicenseFormWebPartStrings__WEBPACK_IMPORTED_MODULE_6__["messageFormSendSuccessfully"];
-                setTimeout(function () {
-                    window.location.href = "https://intranet.bfh.ch/BFH/de/Dienste/IT/Software/SW_Kiosk/camtasia_snagit/form_closed/Seiten/default.aspx";
-                }, 3000);
+                if (LicenseFormWebPartStrings__WEBPACK_IMPORTED_MODULE_6__["RedirectUrlFieldLabel"] !== "") {
+                    setTimeout(function () {
+                        window.location.href = _this.properties.redirectUrl;
+                    }, 3000);
+                }
             }
             else
                 statusMessage.innerHTML = LicenseFormWebPartStrings__WEBPACK_IMPORTED_MODULE_6__["messageFormSendError"];
@@ -344,6 +349,9 @@ var LicenseFormWebPart = /** @class */ (function (_super) {
                             groupFields: [
                                 Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_1__["PropertyPaneTextField"])('targetList', {
                                     label: LicenseFormWebPartStrings__WEBPACK_IMPORTED_MODULE_6__["DescriptionFieldLabel"]
+                                }),
+                                Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_1__["PropertyPaneTextField"])('redirectUrl', {
+                                    label: LicenseFormWebPartStrings__WEBPACK_IMPORTED_MODULE_6__["RedirectUrlFieldLabel"]
                                 })
                             ]
                         }

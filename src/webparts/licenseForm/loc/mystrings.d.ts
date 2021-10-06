@@ -2,6 +2,7 @@ declare interface ILicenseFormWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
+  RedirectUrlFieldLabel: string;
   lblFormDisplayName: string;
   lblFormEMail: string;
   buttonFormSend: string;

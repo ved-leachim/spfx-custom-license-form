@@ -3,7 +3,7 @@
   "solution": {
     "name": "custom-license-form-client-side-solution",
     "id": "dd7ba5bc-dc3f-46cf-8fc0-1fe0c7ae5495",
-    "version": "1.0.0.4",
+    "version": "1.0.1.5",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "developer": {
