@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "LicenseFormWebPartStrings": "lib/webparts/licenseForm/loc/{locale}.js"
+    "LicenseFormWebPartStrings": "lib/webparts/licenseForm/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

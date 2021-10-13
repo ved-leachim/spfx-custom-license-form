@@ -3,8 +3,10 @@ declare interface ILicenseFormWebPartStrings {
   BasicGroupName: string;
   DescriptionFieldLabel: string;
   RedirectUrlFieldLabel: string;
+  OperatingSystemsFieldLabel: string;
   lblFormDisplayName: string;
   lblFormEMail: string;
+  lblOS: string;
   buttonFormSend: string;
   messageFormSendSuccessfully: string;
   messageFormSendError: string;
