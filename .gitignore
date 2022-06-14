@@ -18,7 +18,7 @@
 *_REMOTE_*.txt
 
 ### SPFx ###
-.sharepoint/*
+.sharepoint/**
 
 ### macOS ###
 # General
