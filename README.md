@@ -2,8 +2,6 @@
 
 ## Summary
 
-The Form is used to replace the old InfoPath Forms on the SP2013 Intranet, which have been mainly used in the "Softwarekiosk".
-
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/npm/v/@microsoft/sp-component-base/latest?color=green)
